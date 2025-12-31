@@ -13,9 +13,11 @@
     "@prisma/client": "^7.2.0",
     "firebase": "^12.7.0",
     "firebase-admin": "^13.6.0",
+    "mapbox-gl": "^3.17.0",
     "next": "16.1.1",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "react-map-gl": "^7.1.9"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
