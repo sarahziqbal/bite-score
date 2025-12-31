@@ -1,6 +1,9 @@
+import MapboxClient from "@/components/MapboxClient";
+
 export default function Home() {
   return (
-    <section className="bg-background border-b border-foreground/20">
-    </section>
+    <div className="h-full w-full">
+      <MapboxClient lat={49.8951} lng={-97.1384} />
+    </div>
   );
 }

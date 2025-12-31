@@ -15,9 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${openSans.variable} font-sans`}>
+      <body suppressHydrationWarning className={`${openSans.variable} font-sans h-screen flex flex-col`}>
        <Banner />
-        <main>{children}</main>
+        <main className="flex-1 overflow-hidden">{children}</main>
       </body>
     </html>
   );
