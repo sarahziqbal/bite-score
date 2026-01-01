@@ -5,20 +5,24 @@ type ButtonProps = {
   onClick?: () => void;
   bold?: boolean;
   disabled?: boolean;
+  active?: boolean;
 };
 
-export default function Button({children, onClick, bold = false, disabled = false}: ButtonProps) {
+export default function Button({children, onClick, bold = false, disabled = false, active = false}: ButtonProps) {
   return (
-    <button onClick={onClick} disabled={disabled}  className={`
-    cursor-pointer
-    inline-flex items-center justify-center
-    rounded-md px-2 py-2  text-sm ${bold ? "font-bold" : "font-medium"}
-    bg-background text-foreground
-    hover:bg-hover
-    focus:outline-none
-    disabled:opacity-50 disabled:cursor-not-allowed
-    transition-colors duration-150`}
-  >
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      className={`
+        inline-flex items-center justify-center
+        rounded-md px-3 py-2 text-sm
+        cursor-pointer
+        ${bold ? "font-bold" : "font-medium"}
+        ${active ? "bg-[var(--foreground)] text-[var(--background)]" : "bg-[var(--background)] text-[var(--foreground)] hover:bg-[var(--hover)]" }
+        disabled:opacity-50
+        transition-colors
+      `}
+    >
       {children}
     </button>
   );
