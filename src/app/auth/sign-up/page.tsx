@@ -6,7 +6,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import Link from "next/link";
-import { auth } from "@/src/lib/firebaseClient";
+import { auth } from "@/src/lib/firebase/firebaseClient";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
