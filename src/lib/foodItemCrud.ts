@@ -39,6 +39,12 @@ export async function getFoodItemsByRestaurantId(restaurantId: string): Promise<
   });
 }
 
+export async function getFoodItemByName(name: string): Promise<FoodItem | null> {
+  return await prisma.foodItem.findFirst({
+    where: { name },
+  });
+}
+
 export async function getAllFoodItems(): Promise<FoodItem[]> {
   return await prisma.foodItem.findMany();
 }

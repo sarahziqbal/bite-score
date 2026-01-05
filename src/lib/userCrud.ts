@@ -32,6 +32,12 @@ export async function getUserByEmail(email: string): Promise<User | null> {
   });
 }
 
+export async function getUserByName(name: string): Promise<User | null> {
+  return await prisma.user.findFirst({
+    where: { name },
+  });
+}
+
 export async function getAllUsers(): Promise<User[]> {
   return await prisma.user.findMany();
 }
